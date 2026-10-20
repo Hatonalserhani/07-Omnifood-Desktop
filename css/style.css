@@ -1,0 +1,375 @@
+/*
+---01 TYPOGRAPHY SYSTEM
+
+- Font Sizes (px)
+10/12/14/16\18\20\24\30\36\44\52\62\74\68\98
+
+- Font weights:
+Default: 400
+
+- Line height:
+Default: 1
+
+--- 02 COLORS
+
+- Primary:#e67e22
+- Tints:#fdf2e9
+- Shades:#cf711f
+- Accents:
+- Greys
+#555
+#333
+
+--- 05 SHADOWS
+
+--- 06 BORDER-RADIUS
+
+--- 07 WHITESPACE 
+
+- Spacing system (px)
+2/4/8/12/16/24/32/48/64/80/96/128
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+body {
+  font-family: "Noto Sans Display", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+/****************/
+/* GENRAL REUSABLE COMPONENTS*/
+/****************/
+.heading-primary {
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: #333;
+  letter-spacing: -0.5px;
+  margin-bottom: 3.2rem;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6px 3.2rem;
+  border-radius: 9px;
+  /*Put transition on original"state"*/
+  transition: background-color 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+.btn--full:hover,
+.btn--full:active {
+  background-color: #cf711f;
+  color: #fff;
+}
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #805314;
+  color: #918989;
+}
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #fdf2e9;
+  /*border: 3px solid #dfcfcf;*/
+
+  /*Trick to add border inside*/
+  box-shadow: inset 0 0 0 3px #fff;
+}
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+/****************/
+/*HEADE */
+/****************/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdf2e9;
+
+  /*Because we want header to be sticky later*/
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+
+.logo {
+  height: 2.2rem;
+}
+/****************/
+/*HERO SECTION*/
+/****************/
+
+.section-hero {
+  background-color: #fdf2e9;
+  padding: 4.8rem 0 9.6rem 0;
+}
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 9.6rem;
+}
+
+.hero-description {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+.hero-text-box {
+  text-align: center;
+}
+
+.delivered-meals {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 8rem;
+}
+.delivered-imgs {
+  display: flex;
+}
+.delivered-imgs img {
+  height: 4.8rem;
+  width: 4rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+}
+.delivered-imgs img:last-child {
+  margin: 0;
+}
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.delivered-text span {
+  color: #cf711f;
+  font-weight: 700;
+}
+/* HOW IT WORKS SECTION */
+
+.how-it-works {
+  padding: 9.6rem 4.8rem;
+  background-color: #fffaf3;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.subheading {
+  display: block;
+  color: #e67e22;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.6rem;
+}
+
+.section-title {
+  font-size: 3.6rem;
+  color: #333;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.section-description {
+  font-size: 1.8rem;
+  line-height: 1.7;
+  color: #666;
+  max-width: 65rem;
+  margin-bottom: 4.8rem;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3.2rem;
+}
+
+.step-card {
+  background-color: #fff;
+  padding: 3.2rem 2.4rem;
+  border-radius: 12px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.step-card:hover {
+  transform: translateY(-8px);
+}
+
+.step-number {
+  color: #e67e22;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.step-icon {
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fdf2e9;
+  border-radius: 50%;
+  font-size: 2.8rem;
+  margin: 2rem 0;
+}
+
+.step-card h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+
+.step-card p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* WHY OMNIFOOD SECTION */
+
+.why-omnifood {
+  padding: 9.6rem 4.8rem;
+  background-color: #fdf2e9;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 6.4rem;
+}
+
+.why-content .section-description {
+  margin-bottom: 3.2rem;
+}
+
+.benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.6rem;
+  margin-bottom: 2.4rem;
+}
+
+.benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: #e67e22;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.benefit h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 0.8rem;
+}
+
+.benefit p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+.why-image {
+  position: relative;
+}
+
+.why-image img {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+}
+
+.image-caption {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background-color: #fff;
+  padding: 1.6rem 2rem;
+  border-radius: 12px;
+  margin-top: 1.6rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.05);
+}
+
+.image-caption span {
+  font-size: 2.8rem;
+}
+
+.image-caption p {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .how-it-works,
+  .why-omnifood {
+    padding: 6.4rem 2.4rem;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 3rem;
+  }
+}
