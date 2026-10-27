@@ -821,6 +821,8 @@ body {
 
   .main-nav-list {
     display: flex;
+    flex-direction: column;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
