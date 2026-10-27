@@ -798,3 +798,27 @@ body {
     text-align: center;
   }
 }
+/* Mobile Navigation */
+@media (max-width: 600px) {
+  .header {
+    height: auto;
+    padding: 2rem 1.6rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .main-nav {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .main-nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+  .main-nav-list a {
+    font-size: 1.4rem;
+  }
+}
