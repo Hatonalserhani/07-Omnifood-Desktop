@@ -844,3 +844,29 @@ body {
     margin-top: 0.8rem;
   }
 }
+/* Fix Hero layout on mobile */
+@media (max-width: 600px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+    padding: 0 1.6rem;
+  }
+
+  .hero-img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-text-box {
+    text-align: center;
+  }
+
+  .heading-primary {
+    font-size: 3.6rem;
+  }
+
+  .hero-description {
+    font-size: 1.6rem;
+    margin-bottom: 3.2rem;
+  }
+}
