@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Your Account | Omnifood</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      .signup-page {
+        min-height: 100vh;
+        background: #fdf2e9;
+        padding: 5rem 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .signup-card {
+        background: #fff;
+        width: 100%;
+        max-width: 45rem;
+        padding: 4rem;
+        border-radius: 12px;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08);
+      }
+
+      .signup-card h1 {
+        font-size: 3rem;
+        color: #333;
+        margin-bottom: 1rem;
+      }
+
+      .signup-card p {
+        font-size: 1.6rem;
+        color: #666;
+        margin-bottom: 2.5rem;
+        line-height: 1.6;
+      }
+
+      .signup-form label {
+        display: block;
+        margin-bottom: 0.7rem;
+        font-size: 1.5rem;
+        color: #333;
+      }
+
+      .signup-form input,
+      .signup-form select {
+        width: 100%;
+        padding: 1.2rem;
+        margin-bottom: 1.8rem;
+        border: 1px solid #ddd;
+        border-radius: 7px;
+        font-size: 1.5rem;
+        background: #fff;
+      }
+
+      .signup-form button {
+        width: 100%;
+        padding: 1.4rem;
+        border: none;
+        border-radius: 7px;
+        background: #e67e22;
+        color: white;
+        font-size: 1.7rem;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .signup-form button:hover {
+        background: #cf711f;
+      }
+
+      .back-link {
+        display: block;
+        margin-top: 2rem;
+        text-align: center;
+        color: #cf711f;
+        font-size: 1.5rem;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="signup-page">
+      <div class="signup-card">
+        <h1>Create your account</h1>
+
+        <p>
+          Tell us about yourself so we can personalize your healthy meal
+          experience.
+        </p>
+
+        <form class="signup-form" id="signup-form">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Enter your name" required />
+
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="you@example.com"
+            required
+          />
+
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Create a password"
+            required
+          />
+
+          <label for="goal">Your Health Goal</label>
+          <select id="goal" required>
+            <option value="">Choose your goal</option>
+            <option>Eat healthier</option>
+            <option>Lose weight</option>
+            <option>Build muscle</option>
+          </select>
+
+          <button type="submit">Create Account</button>
+        </form>
+        <p
+          id="success-message"
+          style="display: none; color: #cf711f; font-weight: 600"
+        ></p>
+        <a href="index.html" class="back-link"> Back to Home </a>
+      </div>
+    </main>
+  </body>
+</html>
+
+<script>
+  const form = document.getElementById("signup-form");
+  const nameInput = document.getElementById("name");
+  const message = document.getElementById("success-message");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    message.textContent = `Welcome, ${nameInput.value}! Your account form is complete.`;
+
+    message.style.display = "block";
+    form.reset();
+  });
+</script>

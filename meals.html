@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Our Meals | Omnifood</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      .meals-page {
+        padding: 5rem 4.8rem 8rem;
+        background: #fffaf3;
+        min-height: 100vh;
+      }
+
+      .meals-container {
+        max-width: 120rem;
+        margin: 0 auto;
+      }
+
+      .meals-heading {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .meals-heading span {
+        color: #e67e22;
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .meals-heading h1 {
+        font-size: 4rem;
+        color: #333;
+        margin: 1.5rem 0;
+      }
+
+      .meals-heading p {
+        font-size: 1.8rem;
+        color: #666;
+        line-height: 1.6;
+      }
+
+      .meal-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3.2rem;
+      }
+
+      .meal-card {
+        background: #fff;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s;
+      }
+
+      .meal-card:hover {
+        transform: translateY(-6px);
+      }
+
+      .meal-card img {
+        display: block;
+        width: 100%;
+        height: 22rem;
+        object-fit: cover;
+      }
+
+      .meal-info {
+        padding: 2.4rem;
+      }
+
+      .meal-tag {
+        display: inline-block;
+        background: #e6f5d9;
+        color: #38651d;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+
+      .meal-info h2 {
+        font-size: 2.2rem;
+        color: #333;
+        margin: 1.5rem 0 1rem;
+      }
+
+      .meal-description {
+        font-size: 1.6rem;
+        color: #666;
+        line-height: 1.6;
+        min-height: 5rem;
+      }
+
+      .meal-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .meal-price {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #e67e22;
+      }
+
+      .add-meal {
+        border: none;
+        border-radius: 8px;
+        background: #e67e22;
+        color: white;
+        padding: 1rem 1.4rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      .add-meal:hover {
+        background: #cf711f;
+      }
+
+      .cart-status {
+        text-align: center;
+        margin-top: 3.2rem;
+        font-size: 1.8rem;
+        color: #333;
+        font-weight: 700;
+      }
+
+      .back-home {
+        display: inline-block;
+        margin-bottom: 3rem;
+        color: #e67e22;
+        font-size: 1.6rem;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      @media (max-width: 800px) {
+        .meal-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 550px) {
+        .meal-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .meals-page {
+          padding: 3rem 2rem;
+        }
+
+        .meals-heading h1 {
+          font-size: 3rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="meals-page">
+      <div class="meals-container">
+        <a href="index.html" class="back-home"> ← Back to Home </a>
+
+        <header class="meals-heading">
+          <span>Our Menu</span>
+          <h1>Find your perfect meal</h1>
+          <p>
+            Fresh ingredients, delicious recipes, and healthy meals made for
+            you.
+          </p>
+        </header>
+
+        <section class="meal-grid">
+          <article class="meal-card">
+            <img
+              src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80"
+              alt="Fresh healthy salad bowl"
+            />
+
+            <div class="meal-info">
+              <span class="meal-tag">Vegetarian</span>
+              <h2>Garden Fresh Bowl</h2>
+              <p class="meal-description">
+                Fresh greens, vegetables, and a delicious dressing.
+              </p>
+
+              <div class="meal-bottom">
+                <span class="meal-price">$9.99</span>
+                <button class="add-meal" data-name="Garden Fresh Bowl">
+                  + Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="meal-card">
+            <img
+              src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80"
+              alt="Healthy chicken and vegetable meal"
+            />
+
+            <div class="meal-info">
+              <span class="meal-tag">High Protein</span>
+              <h2>Chicken Power Bowl</h2>
+              <p class="meal-description">
+                A balanced meal with protein and fresh vegetables.
+              </p>
+
+              <div class="meal-bottom">
+                <span class="meal-price">$12.99</span>
+                <button class="add-meal" data-name="Chicken Power Bowl">
+                  + Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="meal-card">
+            <img
+              src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=800&q=80"
+              alt="Salmon served with vegetables"
+            />
+
+            <div class="meal-info">
+              <span class="meal-tag">Healthy Choice</span>
+              <h2>Salmon Delight</h2>
+              <p class="meal-description">
+                Flavorful salmon with a fresh and nourishing side.
+              </p>
+
+              <div class="meal-bottom">
+                <span class="meal-price">$14.99</span>
+                <button class="add-meal" data-name="Salmon Delight">
+                  + Add
+                </button>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <p class="cart-status" aria-live="polite">
+          Your cart: <span id="cart-count">0</span> meals
+        </p>
+      </div>
+    </main>
+
+    <script>
+      let cartCount = 0;
+
+      const cartCountElement = document.getElementById("cart-count");
+
+      const addButtons = document.querySelectorAll(".add-meal");
+
+      addButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          cartCount++;
+
+          cartCountElement.textContent = cartCount;
+
+          button.textContent = "✓ Added";
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -6,9 +6,14 @@
 
 - Font weights:
 Default: 400
+Medium: 500
+Semi-bold:600
+Bold:700
 
 - Line height:
 Default: 1
+Small:1.05
+Paragraph default:1.6
 
 --- 02 COLORS
 
@@ -23,6 +28,8 @@ Default: 1
 --- 05 SHADOWS
 
 --- 06 BORDER-RADIUS
+Default:9px
+
 
 --- 07 WHITESPACE 
 
@@ -122,6 +129,43 @@ body {
 .logo {
   height: 2.2rem;
 }
+/*****************/
+/* NAVIGATION */
+/*****************/
+
+.main-nav {
+  margin-left: auto;
+}
+
+.main-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  list-style: none;
+}
+
+.main-nav-list a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.main-nav-list a:hover {
+  color: #e67e22;
+}
+
+.main-nav-list .nav-cta {
+  background-color: #e67e22;
+  color: #fff;
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+}
+
+.main-nav-list .nav-cta:hover {
+  background-color: #cf711f;
+}
 /****************/
 /*HERO SECTION*/
 /****************/
@@ -130,6 +174,7 @@ body {
   background-color: #fdf2e9;
   padding: 4.8rem 0 9.6rem 0;
 }
+
 .hero {
   max-width: 130rem;
   margin: 0 auto;
@@ -371,5 +416,354 @@ body {
 
   .section-title {
     font-size: 3rem;
+  }
+}
+.step-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.step-card h3,
+.step-card p {
+  text-decoration: none;
+}
+.step-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.step-card h3,
+.step-card p,
+.step-card .step-number {
+  text-decoration: none;
+}
+.signup-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+/* FOOTER SECTION */
+
+.footer {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+  gap: 3.2rem;
+  padding: 9.6rem 4.8rem;
+  border-top: 1px solid #eee;
+  background-color: #fff;
+}
+
+.footer img {
+  height: 2.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.footer h3 {
+  font-size: 1.6rem;
+  margin-bottom: 2.4rem;
+}
+
+.footer p,
+.footer a {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.footer-column,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #e67e22;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.2rem;
+  margin: 2.4rem 0;
+}
+
+.copyright {
+  margin-top: 2.4rem;
+}
+
+/* RESPONSIVE FOOTER */
+
+@media (max-width: 768px) {
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 4.8rem 2.4rem;
+  }
+}
+/* TESTIMONIALS SECTION */
+
+.testimonials {
+  padding: 9.6rem 0;
+  background-color: #fdf2e9;
+}
+
+.testimonials .container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.testimonials .section-title {
+  max-width: 60rem;
+  margin-bottom: 4.8rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3.2rem;
+  width: 100%;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  padding: 3.2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.06);
+}
+
+.testimonial-card img {
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+
+.testimonial-card blockquote {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-card p {
+  color: #888;
+  font-size: 1.4rem;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials .container {
+    padding: 0 2rem;
+  }
+}
+
+/* FEATURED MEALS SECTION */
+.featured-meals {
+  padding: 7rem 0;
+  background-color: #faf7f2;
+}
+
+.featured-meals .section-title {
+  margin-bottom: 1.5rem;
+}
+
+.featured-meals .section-description {
+  margin-bottom: 3.5rem;
+}
+
+.featured-meals-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+}
+
+.featured-meal-card {
+  background-color: #fff;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.07);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.featured-meal-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1.6rem 3rem rgba(0, 0, 0, 0.12);
+}
+
+.featured-meal-card img {
+  width: 100%;
+  height: 24rem;
+  object-fit: cover;
+  display: block;
+}
+
+.featured-meal-info {
+  padding: 2.4rem;
+}
+
+.meal-tag {
+  display: inline-block;
+  background-color: #e4f2d4;
+  color: #456b35;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.featured-meal-info h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.featured-meal-info p {
+  color: #777;
+  line-height: 1.7;
+}
+
+.meal-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.meal-price {
+  color: #cf711f;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.meal-button {
+  background-color: #cf711f;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.meal-button:hover {
+  background-color: #a85b18;
+}
+
+@media (max-width: 700px) {
+  .featured-meals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-meal-card img {
+    height: 22rem;
+  }
+}
+/* PRICING SECTION */
+.pricing-section {
+  padding: 7rem 0;
+  background-color: #fff;
+}
+
+.pricing-section .section-title {
+  margin-bottom: 1.5rem;
+}
+
+.pricing-section .section-description {
+  margin-bottom: 3.5rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+  max-width: 90rem;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.pricing-card {
+  padding: 3.2rem;
+  background-color: #faf7f2;
+  border: 1px solid #eee5d9;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.08);
+}
+
+.pricing-featured {
+  border: 2px solid #cf711f;
+  background-color: #fffaf4;
+}
+
+.pricing-card h3 {
+  font-size: 2.4rem;
+  margin: 1.5rem 0 0.8rem;
+}
+
+.pricing-description {
+  color: #777;
+  line-height: 1.7;
+}
+
+.pricing-price {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #cf711f;
+  margin: 2rem 0;
+}
+
+.pricing-price > span:first-child {
+  font-size: 2rem;
+}
+
+.pricing-price .price-unit {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #777;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 3rem;
+}
+
+.pricing-features li {
+  margin-bottom: 1.5rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.pricing-button {
+  display: block;
+  text-align: center;
+  margin-top: auto;
+}
+
+@media (max-width: 700px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card {
+    padding: 2.4rem;
   }
 }
