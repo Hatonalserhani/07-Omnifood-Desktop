@@ -37,3 +37,43 @@ Istead, 1rem =1em = 16px */
 2/4/8/12/16/24/32/48/64/80/96/128
 
 */
+@media (max-width: 200em) {
+  .btn-mobile-nav {
+    display: block;
+    font-size: 3.2rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100vh;
+    background-color: #fdf2e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    z-index: 999;
+
+    transform: translateX(100%);
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.4s ease;
+  }
+
+  .nav-open .main-nav {
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+}
