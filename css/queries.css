@@ -37,7 +37,7 @@ Istead, 1rem =1em = 16px */
 2/4/8/12/16/24/32/48/64/80/96/128
 
 */
-@media (max-width: 200em) {
+@media (max-width: 48em) {
   .btn-mobile-nav {
     display: block;
     font-size: 3.2rem;
